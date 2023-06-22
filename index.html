@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="https://www.instagram.com/jennierubyjane/" class="brand">Jennie</a>
+        <div class="navigation">
+            <a href="#">Home</a>
+            <a href="https://kpopping.com/profiles/idol/Jennie">About</a>
+            <a href="https://people.com/music/blackpink-what-you-need-to-know-about-kpops-biggest-girl-group/">Group</a>
+            <a href="https://www.gettyimages.com/photos/jennie-kim">Gallery</a>
+        </div>
+    </header>
+
+
+    <section class="home">
+        <video src="1.mp4" muted autoplay loop class="video-slider active"></video>
+        <video src="2.mp4" muted autoplay loop class="video-slider"></video>
+        <video src="3.mp4" muted autoplay loop class="video-slider"></video>
+        <video src="4.mp4" muted autoplay loop class="video-slider"></video>
+        <video src="5.mp4" muted autoplay loop class="video-slider"></video>
+        <div class="content active">
+            <h1>Solo</h1>
+            <p>Debut solo single of South Korean singer, rapper, and Blackpink member Jennie. Released on November 12, 2018, through YG and Interscope, the song was written by Teddy Park and produced by him alongside 24. Musically, "Solo" is a dance, pop, and hip hop song with EDM elements. Its lyrical content revolves around the theme of independence after a break-up.</p>
+            <a href="https://www.youtube.com/watch?v=b73BI9eUkjM">Watch Now</a>
+            </div>
+        <div class="content">
+            <h1>You and Me</h1>
+            <p>Second solo single of South Korean singer, rapper, and Blackpink member Jennie. Jennie said “It’s a song called You & Me. I recorded it about 3~4 years ago “. She also revealed that it was written around the time of her track “SOLO” and that it was on the list of songs that she would release on her solo debut or for something later.</p>
+            <a href="https://www.youtube.com/watch?v=_WB1TMvymS4">Watch Now</a>
+            </div>
+        <div class="content">
+            <h1>Porsche</h1>
+            <p>In early October 2022, luxury car brand Porsche unveiled their special collaboration project with BLACKPINK's Jennie. As part of the collab, Jennie was able to customize a car titled the “Taycan 4S Cross Turismo for Jennie Ruby Jane.”</p>
+            <a href="https://www.youtube.com/watch?v=_UlMjQYIPsY">Watch Now</a>
+            </div>
+        <div class="content">
+            <h1>Chanel</h1>
+            <p>Her first major luxury deal came in 2018 with Chanel Korea appointing her as their brand ambassador.</p>
+            <a href="https://www.youtube.com/watch?v=zuiAzvLzN0o">Watch Now</a>
+            </div>
+        <div class="content">
+            <h1>Calvin Klein</h1>
+            <p>Calvin Klein announces, starting May 10, Jennie for Calvin Klein, a limited edition capsule collection designed in partnership with artist, brand ambassador and global icon, Jennie Kim. Who better than the South Korean star to embody the image of one of the world's coolest underwear and casual wear brands?</p>
+            <a href="https://www.youtube.com/watch?v=JFIyFV44OLI">Watch Now</a>
+            </div>
+
+         <div class="media-icons">
+            <a href="https://www.facebook.com/BLACKPINKOFFICIAL/"> <i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/jennierubyjane/"> <i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@jennierubyjane"> <i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@bp_tiktok"> <i class="fab fa-tiktok"></i></a>
+         </div>
+         <div class="slider-navigation">
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+         </div>
+    </section>
+
+    <script>
+        // javascript for videos sider Navigation
+
+        const btns = document.querySelectorAll('.nav-btn');
+        const slides = document.querySelectorAll('.video-slider');
+        const contents = document.querySelectorAll('.content');
+        var sliderNav = function(index) {
+            btns.forEach((btn) => {
+                btn.classList.remove('active');
+            });
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+            });
+            contents.forEach((content) => {
+                content.classList.remove('active');
+            });
+
+            btns[index].classList.add('active');
+            slides[index].classList.add('active');
+            contents[index].classList.add('active');
+        }
+
+        btns.forEach((btn,i) => {
+            btn.addEventListener('click', () => {
+                sliderNav(i);
+            })
+        })
+    </script>
+</body>
+</html>
